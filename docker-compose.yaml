@@ -1,10 +1,10 @@
 services:
-  ffc-template-node:
+  fcp-fd-customer-receiver-messages:
     build:
       context: .
       target: production
-    image: ffc-template-node
-    container_name: ffc-template-node
+    image: fcp-fd-customer-receiver-messages
+    container_name: fcp-fd-customer-receiver-messages
     environment:
-      APPINSIGHTS_CLOUDROLE: ffc-template-node-local
+      APPINSIGHTS_CLOUDROLE: fcp-fd-customer-receiver-messages-local
       APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
