@@ -25,11 +25,11 @@ container:
   requestCpu: 100m
   limitMemory: 100Mi
   limitCpu: 100m
-  port: 3000
+  port: 3012
 
 livenessProbe:
   path: /healthz
-  port: 3000
+  port: 3012
   initialDelaySeconds: 20
   periodSeconds: 10
   failureThreshold: 3
@@ -37,8 +37,14 @@ livenessProbe:
 
 readinessProbe:
   path: /healthy
-  port: 3000
+  port: 3012
   initialDelaySeconds: 30
   periodSeconds: 10
   failureThreshold: 3
   timeoutSeconds: 5
+
+usePodIdentity: true
+
+azureIdentity:
+  resourceID: not-a-real-resource-id
+  clientID: not-a-real-client-id
