@@ -8,8 +8,8 @@ services:
     image: fcp-fd-customer-receiver-messages-development
     container_name: fcp-fd-customer-receiver-messages-development
     ports:
-      - "3037:3037"
-      - "9037:9229"
+      - "3036:3036"
+      - "9036:9229"
     volumes:
       - ./app:/home/node/app
       - ./package.json:/home/node/package.json
